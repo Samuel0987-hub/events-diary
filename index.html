@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Diary</h1>
+        <form id="eventForm">
+            <input type="text" id="eventTitle" placeholder="Event Title" required>
+            <input type="datetime-local" id="eventTime" required>
+            <label>
+                <input type="checkbox" id="recurringEvent"> Set this event for the same day every week
+            </label>
+            <button type="submit">Add Event</button>
+        </form>
+        <button id="showHistory">Show History</button>
+        <table id="eventTable">
+            <thead>
+                <tr>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="eventList"></tbody>
+        </table>
+    </div>
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
